@@ -10,11 +10,11 @@
   <link rel="stylesheet" href="../css/styleSaudes.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
-<body>
+<body onload="callInformation()">
   <header>
     <nav class="navbar" style="background-color: #91B8CF;">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><strong style="color: white;">Achieved Happiness</strong></a>
+        <a class="navbar-brand" href="#"><strong style="color: white;">Achieved Happiness - Saúde</strong></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style=" background-color: white;">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -36,6 +36,9 @@
               <li class="nav-item naveg">
                 <a class="nav-link" href="ikigai.html">Ikigai</a>
               </li>
+              <li class="nav-item naveg">
+                <a class="nav-link" onclick="encerrarSessao()">Encerrar Sessão</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -43,13 +46,79 @@
     </nav>
   </header>
   <main>
-    <div class="div">
+    <div class="divQuestions">
       <div>
-        <h1 class="title">Em Breve...</h1>
+        <img src="../imgs/saudeFisica.jpg" class="imagens">
       </div>
-      <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Como vai a sua saúde física?</label>
+        <textarea class="form-control" id="txtFisica" rows="3"></textarea>
       </div>
     </div>
+    <div class="divQuestions">
+      <div>
+        <img src="../imgs/saudeEspiritual.jpg" class="imagens">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Como vai a sua saúde espiritual?</label>
+        <textarea class="form-control" id="txtEspiritual" rows="3"></textarea>
+      </div>
+    </div>
+    <div class="divQuestions">
+      <div>
+        <img src="../imgs/saudeIntelectual.jpg" class="imagens">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Como vai a sua saúde intelectual?</label>
+        <textarea class="form-control" id="txtIntelectual" rows="3"></textarea>
+      </div>
+    </div>
+    <div class="divQuestions">
+      <div>
+        <img src="../imgs/saudeProfissional.jpg" class="imagens">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Como vai a sua saúde profissional?</label>
+        <textarea class="form-control" id="txtProfissional" rows="3"></textarea>
+      </div>
+    </div>
+    <div class="divQuestions">
+      <div>
+        <img src="../imgs/saudeFinanceira.jpg" class="imagens">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Como vai a sua saúde financeira?</label>
+        <textarea class="form-control" id="txtFinanceira" rows="3"></textarea>
+      </div>
+    </div>
+    <div class="divQuestions">
+      <div>
+        <img src="../imgs/saudeFamiliar.jpg" class="imagens">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Como vai a sua saúde familiar?</label>
+        <textarea class="form-control" id="txtFamiliar " rows="3"></textarea>
+      </div>
+    </div>
+    <div class="divQuestions">
+      <div>
+        <img src="../imgs/saudeSocial.jpg" class="imagens">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Como vai a sua saúde social?</label>
+        <textarea class="form-control" id="txtSocial" rows="3"></textarea>
+      </div>
+    </div>
+    <div class="divQuestions">
+      <div>
+        <img src="../imgs/saudeEcologica.png" class="imagens">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Como vai a sua saúde ecológica?</label>
+        <textarea class="form-control" id="txtEcológica" rows="3"></textarea>
+      </div>
+    </div>
+    <button type="button" class="btn btn-success w-50 m-auto d-block">Concluir</button>
   </main>
   <footer>
     <div>
@@ -62,5 +131,9 @@
     
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="../script/encerrar.js"></script>
+  <script src="../script/saudes.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  
 </body>
 </html>

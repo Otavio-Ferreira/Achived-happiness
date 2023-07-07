@@ -1,20 +1,20 @@
 main{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  width: 100%;
-  height: 70vh;
+  padding: 15px;
 }
-
-.div{
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-  width: 200px;
+.divQuestions{
+  max-width: 600px;
+  margin: auto;
+  border: solid 3px #91B8CF;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-
-.div > div{
-  width: 200px;
+.divQuestions div{
+  margin: 5px;
+}
+.imagens{
+  width: 300px;
+  margin: auto;
+  display: block;
+  border-radius: 10px;
 }
