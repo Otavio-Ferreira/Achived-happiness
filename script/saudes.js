@@ -26,7 +26,18 @@ function sendAnswers(){
   localStorage.setItem("txtSocial", social)
   localStorage.setItem("txtEcologica", ecologica)
 
-  window.location = "resultadoSaude.html"
+  if(fisica == "" || espiritual == "" || intelectual == "" || profissional == "" || financeira == "" || familiar == "" || social == "" || ecologica == ""){
+    swal({
+      title: "ERRO!",
+      text: "Responda todas as perguntas para obter o resultado!",
+      icon: "warning",
+      button: "Corrigir",
+    });
+  }
+  else{
+    window.location = "resultadoSaude.html"
+  }
+  
 }
 
 function callAnswers(){
