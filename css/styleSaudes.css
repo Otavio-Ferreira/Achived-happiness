@@ -18,3 +18,36 @@ main{
   display: block;
   border-radius: 10px;
 }
+.divHeader{
+  border: solid 3px #91B8CF;
+  border-radius: 10px;
+  margin: 15px;
+}
+.divResults{
+  width: 400px;
+  padding: 5px;
+  border: solid 3px #91B8CF;
+  border-radius: 10px;
+  margin: 15px;
+}
+.divResults h2{
+  background-color: #91B8CF;
+  border-radius: 10px 10px 0px 0px;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+.divResults h4{
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: solid 1px black ;
+}
+.divResults p{
+  text-align: justify;
+}
+.containerResults{
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
