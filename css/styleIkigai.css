@@ -1,0 +1,134 @@
+main{
+  width: 600px;
+  margin: auto;
+}
+.ikigai{
+  width: 550px;
+  height: 550px;
+  margin: 50px auto;
+  border-top: solid 5px red;
+  border-bottom: solid 5px orange;
+  border-right: solid 5px blue;
+  border-left: solid 5px green; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  border-radius: 100%;
+  animation: zoomIn;
+  animation-duration: 1s;
+}
+.alinhamento{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.circle{
+  border: solid 5px black;
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 10px black;
+}
+
+.meio{
+  display: flex;
+}
+
+.top{
+  position: relative;
+  bottom: -150px;
+  border-color: red;
+}
+
+.top1{
+  width: 250px;
+  height: 125px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.top2{
+  width: 250px;
+  height: 125px;
+  display: flex;
+  justify-content: space-between;
+}
+.subTop1{
+  width: 125px;
+  height: 125px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.subTop2{
+  width: 125px;
+  height: 125px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.left{
+  position: relative;
+  right: -220px;
+  border-color: blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: center;
+}
+.rigth{
+  position: relative;
+  left: -220px;
+  border-color: green;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+}
+.end{
+  position: relative;
+  top: -150px;
+  border-color: orange;
+}
+
+.end1{
+  width: 250px;
+  height: 125px;
+  display: flex;
+  justify-content: space-between;
+}
+.end2{
+  width: 250px;
+  height: 125px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.subEnd1{
+  width: 125px;
+  height: 125px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-end;
+}
+
+.subEnd2{
+  width: 125px;
+  height: 125px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-end;
+}
+
+p{
+  font-weight: bold;
+}

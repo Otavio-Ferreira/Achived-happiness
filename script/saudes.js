@@ -1,10 +1,34 @@
 function callInformation(){
-  var nome = localStorage.getItem("nome")
 
-  swal(`Olá ${nome}! tudo bem?`, "Comece agora a responder um questionário sobre saúdes e no final obtenha um resultado de como melhorar a sua saúde em diversas áreas", "../imgs/saudes.png")
-  .then(() => {
-    swal("Antes de começar","Buscando o verbete  saúde em dicionários, encontramos definições como ' Estado de bem-estar físico, mental e psicológico' e também 'Expressão usada para desejar bem-estar ou felicidade a alguém, geralmente em brindes ou despedidas'. Pensando literalmente nos siginificados dessa palavra, fica mais fácil entender o conceito de 8 saúdes adotado por especialistas em inteligência emocional.Nessa subdivisão, ter saúde não é apenas a ausência de doença. Várias áreas-chave devem ser bem cuidadas para permanecerem saudáveis.", "../imgs/saudes.png");
-  });
+  var nome = localStorage.getItem("nome")
+  var validador = localStorage.getItem('atividade')
+
+  if(validador == 1){
+    swal(`Olá ${nome}! tudo bem?`, "Comece agora a responder um questionário sobre saúdes e no final obtenha um resultado de como melhorar a sua saúde em diversas áreas", "../imgs/saudes.png")
+    .then(() => {
+      swal("Antes de começar","Buscando o verbete  saúde em dicionários, encontramos definições como ' Estado de bem-estar físico, mental e psicológico' e também 'Expressão usada para desejar bem-estar ou felicidade a alguém, geralmente em brindes ou despedidas'. Pensando literalmente nos siginificados dessa palavra, fica mais fácil entender o conceito de 8 saúdes adotado por especialistas em inteligência emocional.Nessa subdivisão, ter saúde não é apenas a ausência de doença. Várias áreas-chave devem ser bem cuidadas para permanecerem saudáveis.", "../imgs/saudes.png");
+    });
+  }
+  else{
+    swal({
+      title: "ERRO!",
+      text: "Para ter acesso as nossas funcionalidades é necessário informar o nome!",
+      icon: "warning",
+      button: "Ok",
+    })
+    .then(() => {
+      window.location = "../index.html"
+    })
+  }
+
+  document.getElementById('txtFisica').value = localStorage.getItem("txtFisica")
+  document.getElementById('txtEspiritual').value = localStorage.getItem("txtEspiritual")
+  document.getElementById('txtIntelectual').value = localStorage.getItem("txtIntelectual")
+  document.getElementById('txtProfissional').value = localStorage.getItem("txtProfissional")
+  document.getElementById('txtFinanceira').value = localStorage.getItem("txtFinanceira")
+  document.getElementById('txtFamiliar').value = localStorage.getItem("txtFamiliar")
+  document.getElementById('txtSocial').value = localStorage.getItem("txtSocial")
+  document.getElementById('txtEcologica').value = localStorage.getItem("txtEcologica")
 }
 
 function sendAnswers(){
@@ -51,4 +75,3 @@ function callAnswers(){
   document.getElementById('socialRes').innerText = localStorage.getItem("txtSocial")
   document.getElementById('ecologicaRes').innerText = localStorage.getItem("txtEcologica")
 }
-

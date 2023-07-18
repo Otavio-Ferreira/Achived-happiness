@@ -1,18 +1,29 @@
 function callAlertName(){
-  var validador = localStorage.getItem('nome')
+  
+  var validador = localStorage.getItem('atividade')
 
-  if(validador.length == 0 || validador == null){
+  if(validador == 1){
+    swal("Continuar!");
+  }
+  else{
     swal("Olá! Seja bem vindo ao Achived Happiness", "Para uma melhor experiência nos diga seu nome:", "imgs/logo.png",{
     content: "input",
     })
     .then((value) => {
-      localStorage.setItem("nome", value)
+      var id = value.trim();
+      if(id.length == 0){
+        window.onload()
+      }
+      else{
+        localStorage.setItem("nome", value)
+        localStorage.setItem("atividade", 1)
         swal({
           title: "Muito bem!",
           text: "Aproveite nossas funcionalidades!",
           icon: "success",
           button: "Continuar",
         })
-  })
-}
+      }
+    })
+  }
 }
